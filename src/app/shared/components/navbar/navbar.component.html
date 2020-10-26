@@ -1,8 +1,62 @@
-<p-menubar [model]="items">
-  <ng-template pTemplate="start">
-    <img src="assets/showcase/images/primeng.svg" height="40" class="p-mr-2" />
-  </ng-template>
-  <ng-template pTemplate="end">
-    <input type="text" pInputText placeholder="Searcsh" />
-  </ng-template>
-</p-menubar>
+<div id="header-bg">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <img
+          src="assets/images/logo-symbol.svg"
+          width="30"
+          height="30"
+          alt=""
+          loading="lazy"
+        />
+        <li class="nav-item active">
+          <a class="nav-link" href="#"
+            >Dashboard <span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Wallets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Preise</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <span class="p-buttonset">
+          <button
+            pButton
+            pRipple
+            label="Trade"
+            icon="pi pi-money-bill"
+          ></button>
+          <button
+            pButton
+            pRipple
+            label="Einzahlen"
+            icon="pi pi-arrow-down"
+          ></button>
+        </span>
+        <button
+          pButton
+          type="button"
+          icon="pi pi-arrow-right"
+          label="Senden"
+          class="p-button-outlined"
+        ></button>
+        <img src="https://web.bitpanda.com/assets/images/panda-grey.svg" />
+      </form>
+    </div>
+  </nav>
+</div>

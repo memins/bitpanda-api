@@ -5,10 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { MenubarModule } from 'primeng/menubar';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, MenubarModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    MenubarModule,
+    ButtonModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
