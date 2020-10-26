@@ -15,6 +15,9 @@
       "app",
       "camelCase"
     ],
+    "compilerOptions": {
+      "skipLibCheck": true
+    },
     "component-selector": [
       true,
       "element",
@@ -89,3 +92,4 @@
     "codelyzer"
   ]
 }
+
