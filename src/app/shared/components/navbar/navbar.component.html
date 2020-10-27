@@ -22,15 +22,22 @@
           loading="lazy"
         />
         <li class="nav-item active">
-          <a class="nav-link" href="#"
-            >Dashboard <span class="sr-only">(current)</span></a
+          <a
+            class="nav-link"
+            routerLink="/dashboard"
+            routerLinkActive="is-active"
+            >Dashboard<span class="sr-only">(current)</span></a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Wallets</a>
+          <a class="nav-link" routerLink="/wallets" routerLinkActive="is-active"
+            >Wallets</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Preise</a>
+          <a class="nav-link" routerLink="/prices" routerLinkActive="is-active"
+            >Prices</a
+          >
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
@@ -44,7 +51,7 @@
           <button
             pButton
             pRipple
-            label="Einzahlen"
+            label="Deposit"
             icon="pi pi-arrow-down"
           ></button>
         </span>
@@ -52,7 +59,7 @@
           pButton
           type="button"
           icon="pi pi-arrow-right"
-          label="Senden"
+          label="Send"
           class="p-button-outlined"
         ></button>
         <img src="https://web.bitpanda.com/assets/images/panda-grey.svg" />

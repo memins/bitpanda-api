@@ -17,10 +17,14 @@
         position: relative;
         white-space: nowrap;
 
-        &:focus{
+        &:hover{
           color: #076cdb;
-          text-decoration: underline;
         }
+      }
+
+      .is-active{
+        color: #076cdb;
+        text-decoration: underline;
       }
 
       ul {

@@ -11,6 +11,6 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   getDatafromApi() {
-    return this.http.get(API_URL);
+    return this.http.get<Attributes[]>(API_URL);
   }
 }

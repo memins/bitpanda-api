@@ -1,10 +1,30 @@
-export interface Attributes {
-  bfc_deduction: string;
-  bfc_min_value_eur: number;
-  bfc_enabled: boolean;
-  bfc_upselling_lower_limit: string;
-  bfc_upselling_best_recommended_lower_factor: number;
-  bfc_upselling_best_recommended_upper_factor: number;
+export interface SubAttributes {
+  default_sell_amount: string;
+  has_wallets: boolean;
+  logo: string;
+  logo_color: string;
+  logo_dark: string;
+  logo_white: string;
+  name: string;
+  numeric_character_reference: string;
+  min_withdraw_euro: string;
+  precision: number;
+  symbol: string;
+  symbol_character: string;
+  to_eur_rate: string;
+  wallet_min_withdrawal: string;
+  name_deu: string;
+  name_eng: string;
+  name_fra: string;
+  name_ita: string;
+  name_spa: string;
+  name_tur: string;
+}
+
+export interface Fiat {
+  type: string;
+  attributes: SubAttributes[];
+  id: string;
 }
 
 export interface Bfc {
@@ -47,12 +67,6 @@ export interface Cryptocoin {
 }
 
 export interface Index {
-  type: string;
-  attributes;
-  id: string;
-}
-
-export interface Fiat {
   type: string;
   attributes;
   id: string;
@@ -112,6 +126,6 @@ export interface Data {
   attributes: Attributes;
 }
 
-export interface apiInterface {
+export interface ApiInterface {
   data: Data;
 }
