@@ -1,0 +1,51 @@
+.wallet-title {
+  display: -webkit-box;
+  display: flex;
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2em;
+  position: relative;
+  transition: all .2s ease-in-out;
+  white-space: nowrap;
+  padding-top: 30px;
+}
+
+.filter-box{
+  display: flex;
+  margin-bottom: 40px;
+
+  button{
+    letter-spacing: normal;
+    padding: 4px 10px;
+    margin-right: 8px;
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 13px;
+    border-color: #777;
+    display: inline-block;
+    background: rgba(7,108,219,.1);
+    border-radius: 3px;
+    line-height: 1.4em;
+    color: #076cdb;
+    border: 1px solid rgba(7,108,219,.2);
+
+    &:hover{
+      color: #fff;
+      background-color: #076cdb;
+      border-color: #076cdb;
+    }
+  }
+
+  .is-active{
+    background-color: #1c1c1e;
+    border-color: #1c1c1e;
+    color: #fff;
+
+    &:hover{
+      background-color: #1c1c1e;
+      border-color: #1c1c1e;
+      color: #fff;
+    }
+  }
+}

@@ -9,13 +9,8 @@ import { Attributes } from './shared/models/api.interface';
 })
 export class AppComponent implements OnInit {
   title = 'bitpanda-api';
-  apiData: Attributes[];
 
   constructor(private apiService: ApiService) {}
 
-  ngOnInit() {
-    this.apiService.getDatafromApi().subscribe((data) => {
-      this.apiData = data;
-    });
-  }
+  ngOnInit() {}
 }

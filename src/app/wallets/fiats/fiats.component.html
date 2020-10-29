@@ -1,0 +1,9 @@
+<div *ngIf="apiData">
+  <div *ngFor="let A of apiData[0].data">
+    <div *ngFor="let b of A.attributes">
+      <div *ngFor="let c of b.fiats">
+        <p *ngFor="let d of c.attributes">{{ d.name }}</p>
+      </div>
+    </div>
+  </div>
+</div>

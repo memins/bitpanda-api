@@ -123,9 +123,9 @@ export interface Attributes {
 
 export interface Data {
   type: string;
-  attributes: Attributes;
+  attributes: Attributes[];
 }
 
 export interface ApiInterface {
-  data: Data;
+  data: Data[];
 }
