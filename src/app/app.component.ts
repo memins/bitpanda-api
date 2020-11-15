@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from './shared/services/api.service';
-import { Attributes } from './shared/models/api.interface';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +8,7 @@ import { Attributes } from './shared/models/api.interface';
 export class AppComponent implements OnInit {
   title = 'bitpanda-api';
 
-  constructor(private apiService: ApiService) {}
+  constructor() {}
 
   ngOnInit() {}
 }

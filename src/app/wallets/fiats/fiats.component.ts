@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FiatAttributes } from 'src/app/shared/models/fiat.interface';
 import { ApiService } from '../../shared/services/api.service';
-import { Attributes, ApiInterface } from '../../shared/models/api.interface';
 
 @Component({
   selector: 'app-fiats',
@@ -8,20 +8,19 @@ import { Attributes, ApiInterface } from '../../shared/models/api.interface';
   styleUrls: ['./fiats.component.scss'],
 })
 export class FiatsComponent implements OnInit {
-  apiData: ApiInterface[];
+  fiatData: Array<FiatAttributes>;
 
   constructor(private apiService: ApiService) {}
 
   ngOnInit() {
-    this.getDatafromAPI();
-    console.log('👉 ', this.getDatafromAPI());
-    console.log(this.apiData);
+    this.getDatafromAPIFiats();
   }
 
-  getDatafromAPI() {
-    this.apiService.getDatafromApi().subscribe((data) => {
-      this.apiData = data;
-      console.log('👋 ', data);
+  getDatafromAPIFiats() {
+    this.apiService.getDatafromApi().subscribe((api) => {
+      this.fiatData = api.data.attributes.fiats.map(
+        (fiats) => fiats.attributes
+      );
     });
   }
 }

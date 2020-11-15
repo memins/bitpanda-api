@@ -16,7 +16,17 @@ import { IndicesComponent } from './wallets/indices/indices.component';
 import { WalletsModule } from './wallets/wallets.module';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, DashboardComponent, WalletsComponent, PricesComponent, FiatsComponent, CryptocurrenciesComponent, MetalsComponent, IndicesComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    DashboardComponent,
+    WalletsComponent,
+    PricesComponent,
+    FiatsComponent,
+    CryptocurrenciesComponent,
+    MetalsComponent,
+    IndicesComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

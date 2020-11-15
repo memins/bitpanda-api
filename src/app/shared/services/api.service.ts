@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Attributes, ApiInterface } from '../models/api.interface';
+import { Observable } from 'rxjs';
 
 const API_URL = 'https://api.bitpanda.com/v1/masterdata';
 
@@ -10,7 +10,7 @@ const API_URL = 'https://api.bitpanda.com/v1/masterdata';
 export class ApiService {
   constructor(private http: HttpClient) {}
 
-  getDatafromApi() {
-    return this.http.get<ApiInterface[]>(API_URL);
+  getDatafromApi(): Observable<any> {
+    return this.http.get(API_URL);
   }
 }

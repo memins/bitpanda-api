@@ -1,1 +1,22 @@
-<p>indices works!</p>
+<div class="card-container">
+  <div class="card" *ngFor="let i of indexesData">
+    <div class="card-header">
+      <img src="{{ i.logo }}" />
+      <div>
+        <p>{{ i.symbol }} Wallet</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <p>
+        Price:
+        <b>{{ i.avg_price }} €</b>
+      </p>
+      <p>
+        Change:
+        <b [ngStyle]="{ color: i.change_24h > '0' ? 'green' : 'red' }">{{
+          i.change_24h | number: '1.2-2'
+        }}</b>
+      </p>
+    </div>
+  </div>
+</div>

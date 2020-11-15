@@ -1,9 +1,17 @@
-<div *ngIf="apiData">
-  <div *ngFor="let A of apiData[0].data">
-    <div *ngFor="let b of A.attributes">
-      <div *ngFor="let c of b.fiats">
-        <p *ngFor="let d of c.attributes">{{ d.name }}</p>
-      </div>
+<div class="card-container">
+  <div *ngFor="let i of fiatData" [className]="i.has_wallets ? 'card' : 'red'">
+    <div class="card-header">
+      <img src="{{ i.logo_white }}" />
+      <p>{{ i.name }} Wallet</p>
+    </div>
+    <div class="card-body">
+      <p>
+        Default Sell Amount:
+        <b>{{ i.default_sell_amount }} {{ i.symbol }}</b>
+      </p>
+      <p>
+        Rate to Euro: <b>{{ i.to_eur_rate | number: '1.2-2' }}</b>
+      </p>
     </div>
   </div>
 </div>
