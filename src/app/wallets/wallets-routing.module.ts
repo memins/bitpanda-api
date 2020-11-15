@@ -11,6 +11,11 @@ const routes: Routes = [
   {
     path: '',
     children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'fiats',
+      },
       { path: 'fiats', component: FiatsComponent },
       { path: 'cryptocurrencies', component: CryptocurrenciesComponent },
       { path: 'metals', component: MetalsComponent },
